@@ -1,9 +1,9 @@
 #pragma once
 
+#include <csignal>
 #include "socketManager.hpp"
 #include "threadManager.hpp"
 #include "client.hpp"
-#include <csignal>
 
 /**
  * cleanExit function has the task of catching interruption signals in the system, in order to make sure that the client thread pools have finished executing their tasks and logging

@@ -1,10 +1,7 @@
 #pragma once
 
-#include <syncstream>
 #include <iostream>
-#include <thread>
 #include <set>
-#include <list>
 #include <sstream>
 #include <numeric>
 #include <algorithm>
@@ -13,7 +10,6 @@
 #include <thread>
 #include "event.hpp"
 #include "types.hpp"
-#include <exception>
 
 /**
  * Client class
