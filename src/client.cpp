@@ -1,6 +1,6 @@
 #include "client.hpp"
 
-Client::Client()
+Client::Client(std::string name)
 {
     /*Since the system is not working with real values, we first create a random list subset of [0,1,2,3].
     this subset will be the events treatable by this instance of the client. In a real situation where the complete list
@@ -9,7 +9,7 @@ Client::Client()
     std::random_shuffle(choices, choices + 4);
     int n = rand() % 3 + 1;
     workEvents = std::set(choices, choices + n);
-    this->clientId = std::rand();
+    this->clientId = name;
 }
 
 void Client::attach()

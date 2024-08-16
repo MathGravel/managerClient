@@ -10,11 +10,11 @@ extern int managerFlag;
 
 
 namespace constants {
-    unsigned const int PORT = 4161;
+    unsigned const int PORT = 4162;
      enum EVENTTIMEMS {
         GPSLocation = 1000,
-        MotionDetection = 5000,
-        CellularConnectionChange = 10,
-        BatteryStateChange = 10000
+        MotionDetection = 500,
+        CellularConnectionChange = 50,
+        BatteryStateChange = 200
     };
 };

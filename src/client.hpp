@@ -30,7 +30,7 @@
 class Client
 {
 public:
-    Client();
+    Client(std::string name = "");
     void attach();
     bool checkWork();
     void addEvent(Event ev);
@@ -44,7 +44,7 @@ private:
     void executeMotionDetection();
     std::set<int> workEvents;
     std::queue<Event> workQueue;
-    int clientId;
+    std::string clientId;
     friend std::ostream &operator<<(std::ostream &os, Client const &cl)
     {
         os << "Client :" << cl.clientId << " " << cl.workEvents.size() << " " << cl.workQueue.size();

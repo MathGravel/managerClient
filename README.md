@@ -26,3 +26,9 @@ Le programme n'a aucune librairies externes à installer, mais nécessite toutef
 #Execution
 
 Le programme instantie dans sa version actuelle un système gestionnaire et 4 instances de systèmes clients, qui sont reliés au système gestionnaire. Le gestionnaire lit ensuite, soit par socket, ou par générateur de nombre aléatoires (Voir `src/manager.cpp` pour l'emplacement du code), des tickets d'événements, qui sont ensuite transférés aux clients pour éxécution de tâches.
+
+![Représentation de trace de terminal d'execution](img/example.png?raw=true "Terminal view")
+
+#Erreurs connus
+- Dans sa version actuelle, le système de multi-threading peut se tromper et instancier plus d'un thread pour un client.
+- Seuls 2 types de signaux d'interruption ont été implantés.

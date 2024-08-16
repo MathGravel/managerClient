@@ -23,6 +23,8 @@ void ClientManager::postEvent(const Event &ev)
 
 void ClientManager::subscribeClient(Client *cl)
 {
+    std::mutex temp;
+    std::lock_guard<std::mutex> lock(temp);
     clients.push_front(cl);
     clientThreads.emplace_back(&Client::attach, std::ref(cl));
 }
